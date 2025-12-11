@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  pki-2fa:
+    build: .
+    container_name: pki-2fa
+    ports:
+      - "8080:8080"     # host:container
+    environment:
+      - TZ=UTC
+    volumes:
+      - seed-data:/data   # persistent seed storage
+      - ./cron:/cron   # bind-mount to local folder
+    restart: unless-stopped
+
+volumes:
+  seed-data:
+  cron-output:

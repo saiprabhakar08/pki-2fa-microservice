@@ -1,0 +1,13 @@
+# Ignore encrypted seed
+encrypted_seed.txt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# IDE folders
+.vscode/
+.idea/
